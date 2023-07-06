@@ -1,3 +1,4 @@
+import silence_tensorflow.auto
 import argparse
 import os
 
@@ -97,6 +98,7 @@ def main():
     if not os.path.isdir(base_path):
         os.makedirs(base_path)
     df.to_csv(args.csv_fpath)
+    print("Result saved to csv file.")
 
 if __name__ == "__main__":
     main()

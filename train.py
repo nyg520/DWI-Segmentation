@@ -1,3 +1,4 @@
+import silence_tensorflow.auto
 import argparse
 import os
 
@@ -68,7 +69,6 @@ def main():
 
     if args.gpu_id != -1:
         gpu_devices = tf.config.experimental.list_physical_devices('GPU')
-        print(len(gpu_devices))
         tf.config.experimental.set_memory_growth(gpu_devices[0], True)
 
     train_list = np.load(os.path.join(args.list_path, 'train_list.npy'))
