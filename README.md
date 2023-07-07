@@ -3,7 +3,7 @@
 <div align="center">
   <img width="100%" alt="Research flowchart" src="https://drive.google.com/uc?export=view&id=1B8_EEV68jpadt8_-ATKh2Usnndz9RxMZ">
 </div>
-  
+<br>
 This is the code repository for our paper titled "Deep Learning for Automatic Segmentation of Cerebral Infarcts on Diffusion-Weighted Images: Effects of Training Data Size, Domain Adaptation, and Data Features". The study examined the effectiveness and generalizability of deep learning for acute infarct segmentation on diffusion-weighted magnetic resonance imaging (DWI).  
   
 This study examined the impact of single-site versus multi-site training data, training data size, and domain adaptation on the efficacy of a model using a dataset containing 10,820 DWIs from 10 hospitals.
