@@ -3,9 +3,9 @@
   <img width="100%" alt="Research flowchart" src="https://drive.google.com/uc?export=view&id=1B8_EEV68jpadt8_-ATKh2Usnndz9RxMZ">
 </div>
 <br>
-This is the code repository for our paper titled "Deep Learning for Automatic Segmentation of Cerebral Infarcts on Diffusion-Weighted Images: Effects of Training Data Size, Domain Adaptation, and Data Features". The study examined the effectiveness and generalizability of deep learning for acute infarct segmentation on diffusion-weighted magnetic resonance imaging (DWI).  
+This is the code repository for our paper titled [Deep Learning for Automatic Segmentation of Cerebral Infarcts on Diffusion-Weighted Images: Effects of Training Data Size, Domain Adaptation, and Data Features](https://doi.org/10.1101/2023.07.02.23292150). The study examined the effectiveness and generalizability of deep learning for acute infarct segmentation on diffusion-weighted magnetic resonance imaging (DWI).  
   
-This experiment was conducted by examining the impact of single-site versus multi-site training data, training data size, and domain adaptation on the efficacy of a model using a dataset containing 10,820 DWIs from 10 hospitals.
+Using a dataset containing 10,820 DWIs from 10 institutions, this experiment examined the effect of single-site versus multi-site training data, training data size, and domain adaptation on the performance of a model.
 
 # Requirements
 - Python 3.7
@@ -20,7 +20,7 @@ Full list of required packages is in requirements.txt. Since the code is rather 
 
 # Data preparation
 You will need B1000 diffusion-weighted MR images of brain to start with. For each patient, DICOM files and lesion mask has to be located in seperate folders named 'dcm' and 'gt'.  
-For each lesion mask, the file name should be same as its corresponding DICOM slice and image format such as .jpg or .png is accepted. Also check that the mask is of same size as the image in DICOM file.
+The file name for each lesion mask should be the same as its associated DICOM slice, and image formats such as.jpg or.png are acceptable. Also, make sure that the mask is the same size as the picture in the DICOM file.
 ```
 ├── raw_images
 │   ├── dataset1
