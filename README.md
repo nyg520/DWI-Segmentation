@@ -1,15 +1,13 @@
 # Deep learning for automatic segmentation of cerebral infarcts on diffusion-weighted images:  Effects of training data size, domain adaptation, and data features
-
 <div align="center">
   <img width="100%" alt="Research flowchart" src="https://drive.google.com/uc?export=view&id=1B8_EEV68jpadt8_-ATKh2Usnndz9RxMZ">
 </div>
 <br>
 This is the code repository for our paper titled "Deep Learning for Automatic Segmentation of Cerebral Infarcts on Diffusion-Weighted Images: Effects of Training Data Size, Domain Adaptation, and Data Features". The study examined the effectiveness and generalizability of deep learning for acute infarct segmentation on diffusion-weighted magnetic resonance imaging (DWI).  
   
-This study examined the impact of single-site versus multi-site training data, training data size, and domain adaptation on the efficacy of a model using a dataset containing 10,820 DWIs from 10 hospitals.
+This experiment was conducted by examining the impact of single-site versus multi-site training data, training data size, and domain adaptation on the efficacy of a model using a dataset containing 10,820 DWIs from 10 hospitals.
 
 # Requirements
-
 - Python 3.7
 - [Tensorflow](https://www.tensorflow.org/) 2.9.2
 - tensorflow-addons 0.18.0
@@ -20,8 +18,7 @@ This study examined the impact of single-site versus multi-site training data, t
 
 Full list of required packages is in requirements.txt. Since the code is rather simple, you will probably be fine with different package versions.
 
-# Data Preparation
-
+# Data preparation
 You will need B1000 diffusion-weighted MR images of brain to start with. For each patient, DICOM files and lesion mask has to be located in seperate folders named 'dcm' and 'gt'.  
 For each lesion mask, the file name should be same as its corresponding DICOM slice and image format such as .jpg or .png is accepted. Also check that the mask is of same size as the image in DICOM file.
 ```
@@ -91,5 +88,4 @@ python evaluation.py \
 ```
 
 ## Acknowledgements
-
 None.
