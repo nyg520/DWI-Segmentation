@@ -37,7 +37,7 @@ parser.add_argument("--csv_fpath", default="", type=str, help="path for csv file
 parser.add_argument("--gpu_id", default=0, type=int, help='Device id of GPU to use. Falls back to CPU mode if -1 is given.')
 parser.add_argument("--model_fpath", default="", type=str, help='file path to model checkpoint for evaluation')
 parser.add_argument("--nb_filters", default=[12,24,48,96,192], nargs="+", help="number of filters for the model")
-parser.add_argument("--round_digit", default=3, type=int, help="")
+parser.add_argument("--round_digit", default=3, type=int, help="Decimal number to keep in result metrics")
 
 def main():
     global args
