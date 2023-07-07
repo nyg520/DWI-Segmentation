@@ -22,6 +22,7 @@ parser = argparse.ArgumentParser(description="Image preparation for DWI segmenta
 
 parser.add_argument("--raw_path", default="", type=str, help="path to DICOM and GT files.")
 parser.add_argument("--save_path", default="", type=str, help="path to save processed images")
+parser.add_argument("--img_size", default=[256,256], nargs="+", help="row and column size of image slice")
 parser.add_argument("--n_workers", default=1, type=int,
                     help="Number of workers for preprocessing image. \
                           The maximum of this number will be limited to number of CPU cores.")
@@ -60,9 +61,10 @@ def main():
         gt = read_gt(dcm_path, gt_path)
 
         x, y, _ = rt_img.shape
-        if (x, y) != (256, 256):
-            rt_img = resize_img_ax(rt_img, (256, 256), order=3)
-            gt = resize_img_ax(gt, (256, 256), order=0)
+        target_shape = tuple(args.img_size)
+        if (x, y) != target_shape:
+            rt_img = resize_img_ax(rt_img, target_shape, order=3)
+            gt = resize_img_ax(gt, target_shape, order=0)
             rt_img = rt_img.clip(min=0, max=255)
             rt_img = rt_img.round(0)
             rt_img = rt_img.astype(np.uint8)
