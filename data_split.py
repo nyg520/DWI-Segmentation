@@ -5,7 +5,7 @@ import numpy as np
 
 from sklearn.model_selection import train_test_split
 
-parser = argparse.ArgumentParser(description="Image preparation for DWI segmentation")
+parser = argparse.ArgumentParser(description="Train-validation-test split with dataset subsampling")
 
 parser.add_argument("--data_path", default="", type=str, help="path to preprocessed images")
 parser.add_argument("--save_path", default="", type=str, help="path to save data lists")
