@@ -206,7 +206,10 @@ class RandomAffineV2:
     def affine_transform(self, img, scale, rotation, translation, interp):
         tf_img = img.copy()
         x, y, z = tf_img.shape
-        tform = AffineTransform(scale=scale, translation=translation)
+        try:
+            tform = AffineTransform(scale=scale, translation=translation)
+        except:
+            tform = AffineTransform(scale=(scale,scale), translation=translation)
         for i in range(z):
             img_slice = tf_img[:,:,i].copy()
             img_slice = rotate(img_slice, rotation, order=interp, preserve_range=True)
