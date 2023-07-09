@@ -22,7 +22,7 @@ def main():
     rt_path = os.path.join(args.data_path, 'rt_img')
     flist = os.listdir(rt_path)
 
-    np.save(os.path.join(args.save_path, 'full_dataset.npy', flist))
+    np.save(os.path.join(args.save_path, 'full_dataset.npy'), flist)
 
     # Train-and-validation / Internal test dataset split
     train_val_list = []
